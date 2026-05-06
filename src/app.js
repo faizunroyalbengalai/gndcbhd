@@ -4,7 +4,7 @@ const errorHandler  = require('./middleware/errorHandler');
 const routes        = require('./routes');
 
 const db = require('./config/database');
-db.connect();
+db.connect().catch(() => {});
 
 const app = express();
 
